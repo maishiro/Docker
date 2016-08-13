@@ -9,7 +9,7 @@ FROM ubuntu:14.04
 
 
 
-Ql
+å‚è€ƒ
 
-How to make a Dockerfile for Elasticsearch
+How to make a Dockerfile for Elasticsearch  
 https://www.elastic.co/blog/how-to-make-a-dockerfile-for-elasticsearch
