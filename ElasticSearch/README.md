@@ -23,16 +23,16 @@ Volumeを作成
 
 ## machine ipの確認
 `docker-machine ip`
-> 192.168.99.101
+> 192.168.99.100
 
 ## Elasticsearchへのアクセス
-http://192.168.99.101:9200/
+http://192.168.99.100:9200/
 
 ## elasticsearch-headへのアクセス
-http://192.168.99.101:9200/_plugin/head/
+http://192.168.99.100:9200/_plugin/head/
 
 ## Elastic HQへのアクセス
-http://192.168.99.101:9200/_plugin/hq/
+http://192.168.99.100:9200/_plugin/hq/
 
 
 
