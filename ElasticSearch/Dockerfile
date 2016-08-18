@@ -14,8 +14,12 @@ ENV JAVA_HOME /usr/lib/jvm/java-8-oracle
 
 RUN groupadd -g 1000 elasticsearch && useradd elasticsearch -u 1000 -g 1000
 
-RUN sudo apt-key adv --keyserver pgp.mit.edu --recv-keys 46095ACC8548582C1A2699A9D27D666CD88E42B4 && \
-    sudo add-apt-repository -y "deb http://packages.elastic.co/elasticsearch/2.x/debian stable main" --keyserver https://pgp.mit.edu/ && \
+#RUN sudo apt-key adv --keyserver pgp.mit.edu --recv-keys 46095ACC8548582C1A2699A9D27D666CD88E42B4 && \
+#    sudo add-apt-repository -y "deb http://packages.elastic.co/elasticsearch/2.x/debian stable main" --keyserver https://pgp.mit.edu/ && \
+#    sudo apt-get update && \
+#    sudo apt-get install -y --no-install-recommends elasticsearch
+RUN wget -qO - https://packages.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add - && \
+    echo "deb http://packages.elastic.co/elasticsearch/2.x/debian stable main" | sudo tee -a /etc/apt/sources.list.d/elasticsearch-2.x.list && \
     sudo apt-get update && \
     sudo apt-get install -y --no-install-recommends elasticsearch
 

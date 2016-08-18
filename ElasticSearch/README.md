@@ -61,4 +61,6 @@ http://www.elastichq.org/
 Backup, restore, or migrate data volumes  
 https://docs.docker.com/engine/tutorials/dockervolumes/
 
-
+Repositories
+https://www.elastic.co/guide/en/elasticsearch/reference/2.1/setup-repositories.html
+https://www.elastic.co/guide/en/elasticsearch/reference/current/setup-repositories.html
