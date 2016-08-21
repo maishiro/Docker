@@ -18,7 +18,7 @@ Volumeを作成
 
 
 ## コンテナの起動
-`docker run -it -d --name myes -p 9200:9200 -v esdata:/usr/share/elasticsearch/data maishiro/es`
+`docker run -it -d --name myes -p 9200:9200 -v esdata:/usr/share/elasticsearch/data --restart=always maishiro/es`
 
 
 ## machine ipの確認
@@ -42,6 +42,14 @@ http://192.168.99.100:9200/_plugin/hq/
 
 
 
+## kibanaイメージの取得
+`docker pull kibana`
+
+## kibanaコンテナを起動
+`docker run --name mykibana --link myes:elasticsearch -p 5601:5601 --restart=always -d kibana`
+
+
+
 ### 環境
 * Windows 10
 * Docker Toolbox
@@ -61,6 +69,9 @@ http://www.elastichq.org/
 Backup, restore, or migrate data volumes  
 https://docs.docker.com/engine/tutorials/dockervolumes/
 
-Repositories
+Repositories  
 https://www.elastic.co/guide/en/elasticsearch/reference/2.1/setup-repositories.html
 https://www.elastic.co/guide/en/elasticsearch/reference/current/setup-repositories.html
+
+kibana  
+https://hub.docker.com/_/kibana/
